@@ -1,0 +1,13 @@
+{
+  "name": "filechanges",
+  "version": "0.0.1",
+  "author": "Ryan Olds <ryanrolds@gmail.com>",
+  "main": "./index",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/*.test.js"
+  },
+  "devDependencies": {
+    "mocha": "= 0.12.0",
+    "should": "= 0.5.1"
+  }
+}
