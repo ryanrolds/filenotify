@@ -1,13 +1,13 @@
 
-= File Changes =
+# File Changes #
 
 Watchs fail and emits 'data' events containging new data/lines in file
 
-== Install ==
+## Install ##
 
     npm install filechanges
 
-== Usage ==
+## Usage ##
 
     var FileChanges = require('filechanges');
     var blah = new FileChanges('/path/to/file');
