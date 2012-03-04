@@ -31,7 +31,12 @@ describe('slogger', function() {
       }
     });
 
+    it('should be able to unwatch', function() {
+      watcher.unwatch();
+      watcher.listeners('data').length.should.equal(0);
+    });
+
     // @TODO make sure it chandle overwritting the file
     // @TODO improve permission issue handling
-  });
+  });  
 });

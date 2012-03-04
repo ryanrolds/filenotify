@@ -14,4 +14,7 @@ Watchs a file and emits 'data' events containging new data/lines in file
     blah.on('data', function(error, data) {
       // data is the new line(s)
     });
+
+    // When done unwatch
+    blah.unwatch();
     
