@@ -1,7 +1,7 @@
 
 # File Changes #
 
-Watchs a file and emits 'data' events containging new data/lines in file
+Watchs a file and emits 'change' event with new data/lines in the watched file
 
 ## Install ##
 
