@@ -16,6 +16,11 @@ Watchs a file and emits 'change' event with new data/lines in the watched file
       // theChange is the new line(s)
     });
 
-    // When done unwatch
-    watcher.unwatch();
+    // Pause events
+    watcher.pause();
+
+    // Resume events
+    watcher.resume();
     
+    // Stop
+    watcher.destroy();

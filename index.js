@@ -29,7 +29,15 @@ module.exports = function() {
 
   util.inherits(FileChanges, events.EventEmitter);
 
-  FileChanges.prototype.unwatch = function() {
+  FileChanges.prototype.resume = function() {
+    // @TODO
+  };
+
+  FileChanges.prototype.pause = function() {
+    // @TODO
+  };
+
+  FileChanges.prototype.destroy = function() {
     fs.unwatchFile(this.watchable);
     this.removeAllListeners();
   };
