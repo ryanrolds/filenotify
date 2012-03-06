@@ -17,7 +17,7 @@ module.exports = function() {
 
           fs.open(watchable, 'r', function(error, fd) {
             fs.read(fd, buffer, 0, size, prev.size, function(error, bytes, buff) {
-              caller.emit('data', buff.toString());
+              caller.emit('change', buff.toString());
             });
           });
         }

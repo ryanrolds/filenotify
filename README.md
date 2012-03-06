@@ -10,11 +10,12 @@ Watchs a file and emits 'data' events containging new data/lines in file
 ## Usage ##
 
     var FileChanges = require('filechanges');
-    var blah = new FileChanges('/path/to/file');
-    blah.on('data', function(error, data) {
-      // data is the new line(s)
+    var watcher = new FileChanges('/path/to/file');
+
+    watcher.on('change', function(error, theChange) {
+      // theChange is the new line(s)
     });
 
     // When done unwatch
-    blah.unwatch();
+    watcher.unwatch();
     

@@ -13,8 +13,8 @@ describe('slogger', function() {
       watcher.should.be.instanceof(Watcher);
     });
 
-    it('emits data on change', function(done) {
-      watcher.on('data', function(data) {
+    it('emits changes on change', function(done) {
+      watcher.on('change', function(data) {
         data.should.equal('blah\n');
         done();
       });
@@ -33,7 +33,7 @@ describe('slogger', function() {
 
     it('should be able to unwatch', function() {
       watcher.unwatch();
-      watcher.listeners('data').length.should.equal(0);
+      watcher.listeners('change').length.should.equal(0);
     });
 
     // @TODO make sure it chandle overwritting the file
