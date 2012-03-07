@@ -1,21 +1,21 @@
 
 [![Build Status](https://secure.travis-ci.org/ryanrolds/filenotify.png)](http://travis-ci.org/ryanrolds/filenotify)
 
-# File Changes #
+# FileNotify #
 
 Watchs a file and emits a 'data' event when new data/lines is saved to the watched file
 
 ## Install ##
 
-    npm install filechanges
+    npm install filenotify
 
 ## Usage ##
 
-    var FileNotify = require('filechanges');
+    var FileNotify = require('filenotify');
     var watcher = new FileNotify('/path/to/file');
 
-    watcher.on('data', function(error, theChange) {
-      // theChange is the new line(s)
+    watcher.on('data', function(data) {
+      // data is the new line(s)
     });
 
     // Pause events
