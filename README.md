@@ -1,4 +1,6 @@
 
+[![Build Status](https://secure.travis-ci.org/ryanrolds/filenotify.png)](http://travis-ci.org/ryanrolds/filenotify)
+
 # File Changes #
 
 Watchs a file and emits a 'data' event when new data/lines is saved to the watched file
