@@ -1,7 +1,7 @@
 
 # File Changes #
 
-Watchs a file and emits 'change' event with new data/lines in the watched file
+Watchs a file and emits a 'data' event when new data/lines is saved to the watched file
 
 ## Install ##
 
@@ -9,18 +9,24 @@ Watchs a file and emits 'change' event with new data/lines in the watched file
 
 ## Usage ##
 
-    var FileChanges = require('filechanges');
-    var watcher = new FileChanges('/path/to/file');
+    var FileNotify = require('filechanges');
+    var watcher = new FileNotify('/path/to/file');
 
-    watcher.on('change', function(error, theChange) {
+    watcher.on('data', function(error, theChange) {
       // theChange is the new line(s)
     });
 
     // Pause events
     watcher.pause();
 
-    // Resume events
+    // Resume events (after pause)
     watcher.resume();
     
     // Stop
     watcher.destroy();
+
+    // Start (after destroy)
+    watcher.start();
+
+    // Destroy after empting paused queue
+    watcher.destroySoon();

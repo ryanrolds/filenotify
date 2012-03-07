@@ -15,7 +15,7 @@
   },
   "main": "./index",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/*.test.js"
+    "test": "./node_modules/.bin/mocha -r should -R spec tests/*.test.js"
   },
   "dependencies": {},
   "devDependencies": {
