@@ -32,6 +32,7 @@ FileNotify.prototype.start = function() {
           } else {
             caller.paused.push(buff.toString());
           }
+          fs.close(fd);
         });
       });
     }
