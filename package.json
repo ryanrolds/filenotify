@@ -1,6 +1,6 @@
 {
   "name": "filenotify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ryan Olds <ryanrolds@gmail.com>",
   "description": "Watchs a file and emits 'data' events containging new data/lines in file",
   "keywords": [
